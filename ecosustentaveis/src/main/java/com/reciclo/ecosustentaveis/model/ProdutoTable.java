@@ -11,6 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 
 @Entity
 @Table(name="produto")
@@ -23,6 +24,11 @@ public class ProdutoTable {
 	
 	private long idProduto;
 	
+	@NotNull
+	private String produtoFornecedor;
+	
+
+
 	@OneToMany(mappedBy = "produto",cascade = CascadeType.ALL)
 	@JsonIgnoreProperties(value = "produto")
 
@@ -45,5 +51,12 @@ public class ProdutoTable {
 		this.idProduto = idProduto;
 	}
 	
+	public String getProdutoFornecedor() {
+		return produtoFornecedor;
+	}
+
+	public void setProdutoFornecedor(String produtoFornecedor) {
+		this.produtoFornecedor = produtoFornecedor;
+	}
 	
 }

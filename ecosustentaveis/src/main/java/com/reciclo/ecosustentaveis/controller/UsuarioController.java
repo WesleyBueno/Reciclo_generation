@@ -1,6 +1,7 @@
 package com.reciclo.ecosustentaveis.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +36,7 @@ public class UsuarioController {
 	}
 	
 	@GetMapping("/usuario/busca/{usuarioNome}")
-    public List<UsuarioTable> buscarNome(@PathVariable String usuarioNome){
+    public Optional<UsuarioTable> buscarNome(@PathVariable String usuarioNome){
         return repository.findByusuarioNome(usuarioNome);
     }
     
