@@ -1,14 +1,17 @@
 package com.reciclo.ecosustentaveis.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 
 @Entity
 @Table(name="produto")
@@ -37,6 +40,12 @@ public class ProdutoTable{
 	private double produtoPeso;
 	
 	@ManyToOne
+	@NotNull
+	private String produtoFornecedor;
+	
+
+
+	@OneToMany(mappedBy = "produto",cascade = CascadeType.ALL)
 	@JsonIgnoreProperties(value = "produto")
 	private CategoriaTable categoria;
 	
@@ -126,5 +135,13 @@ public class ProdutoTable{
 		this.produtoPeso = produtoPeso;
 	}
 
+	
+	public String getProdutoFornecedor() {
+		return produtoFornecedor;
+	}
+
+	public void setProdutoFornecedor(String produtoFornecedor) {
+		this.produtoFornecedor = produtoFornecedor;
+	}
 	
 }
