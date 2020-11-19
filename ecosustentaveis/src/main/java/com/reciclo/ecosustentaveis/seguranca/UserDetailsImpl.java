@@ -14,7 +14,7 @@ public class UserDetailsImpl implements UserDetails {
 	
 	
 	public UserDetailsImpl(UsuarioTable user) {
-		this.userName = user.getUsuarioNome();
+		this.userName = user.getUsuarioEmail();
 		this.password = user.getUsuarioSenha();
 	}
 	
