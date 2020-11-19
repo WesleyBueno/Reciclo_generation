@@ -10,7 +10,7 @@ import com.reciclo.ecosustentaveis.model.UsuarioTable;
 public interface UsuarioRepository extends JpaRepository<UsuarioTable, Long> {
 	
 
-	public Optional<UsuarioTable> findByusuarioNome(String userName);
+	public Optional<UsuarioTable> findByusuarioEmail(String userName);
 
 	
 
