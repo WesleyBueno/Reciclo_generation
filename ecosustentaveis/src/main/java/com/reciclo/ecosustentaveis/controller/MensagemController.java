@@ -22,9 +22,7 @@ public class MensagemController {
 	
 	@Autowired
 	private MensagemRepository repository;
-	
-	
-	
+			
 	@GetMapping ("/mensagem")
 	public List<Mensagem> findAll(){
 		return repository.findAll();
@@ -35,15 +33,15 @@ public class MensagemController {
 	}
 	
 	@PostMapping("/mensagem")
-	    public Mensagem criar (@RequestBody Mensagem msn) {
-	    	repository.save(msn);
-	    	return msn;
-	    }
+	public Mensagem criar (@RequestBody Mensagem msn) {
+		repository.save(msn);
+		return msn;
+	}
 	    
 	@DeleteMapping ("/mensagem/{mensagemId}")
 	public void delete (@PathVariable Long mensagemId) {
-	repository.deleteById(mensagemId);
-	    }
+		repository.deleteById(mensagemId);
+	}
 	    
 	
 
