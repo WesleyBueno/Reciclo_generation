@@ -33,12 +33,16 @@ public class BasicSegurancaConfig extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests()
 		.antMatchers("/usuario/logar").permitAll()
 		.antMatchers("/usuario/cadastrar").permitAll()
-		.antMatchers("/categoria").permitAll()
+/*
+
+PERMITEM TODAS AS REQUISICOES
+
 		.antMatchers(HttpMethod.POST).permitAll()
 		.antMatchers(HttpMethod.PUT).permitAll()
 		.antMatchers(HttpMethod.DELETE).permitAll()
 		.antMatchers(HttpMethod.GET).permitAll()
-		
+*/
+
 		.anyRequest().authenticated()
 		.and().httpBasic()
 		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
