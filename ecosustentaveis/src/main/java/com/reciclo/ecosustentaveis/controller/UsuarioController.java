@@ -3,7 +3,6 @@ package com.reciclo.ecosustentaveis.controller;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,14 +36,14 @@ public class UsuarioController {
 	public List<UsuarioTable> findAll(){
 		return repository.findAll();
 	}
-	@GetMapping ("/usuario/{id}")
+	@GetMapping ("/usuario/{usuarioId}")
 	public ResponseEntity<UsuarioTable> getById(@PathVariable Long usuarioId){
 		return repository.findById(usuarioId).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping("/usuario/busca/{usuarioNome}")
-    public Optional<UsuarioTable> buscarNome(@PathVariable String usuarioNome){
-        return repository.findByusuarioEmail(usuarioNome);
+	@GetMapping("/usuario/busca/{usuarioEmail}")
+    public Optional<UsuarioTable> buscarEmail(@PathVariable String usuarioEmail){
+        return repository.findByusuarioEmail(usuarioEmail);
     }
     
     @PostMapping("/usuario")
@@ -67,14 +66,14 @@ public class UsuarioController {
 	}
 
     
-    @PutMapping("/usuario/{id}")
+    @PutMapping("/usuario/{usuarioId}")
     public UsuarioTable atualizar (@PathVariable Long usuarioId, @RequestBody UsuarioTable model) {
     model.setId(usuarioId);
     repository.save(model);
     return model;
     }
     
-    @DeleteMapping ("/usuario/{id}")
+    @DeleteMapping ("/usuario/{usuarioId}")
     public void delete (@PathVariable Long usuarioId) {
     	repository.deleteById(usuarioId);
     }

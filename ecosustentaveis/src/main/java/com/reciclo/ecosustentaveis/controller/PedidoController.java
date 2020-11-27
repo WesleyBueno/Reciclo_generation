@@ -28,9 +28,9 @@ public class PedidoController {
 	public List<PedidoTable> findAll(){
 		return repository.findAll();
 	}
-	@GetMapping ("/pedido/{id}")
-	public ResponseEntity<PedidoTable> getById(@PathVariable Long id){
-		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+	@GetMapping ("/pedido/{idPedido}")
+	public ResponseEntity<PedidoTable> getById(@PathVariable Long idPedido){
+		return repository.findById(idPedido).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
 
     
@@ -41,14 +41,14 @@ public class PedidoController {
     	
     }
     
-    @PutMapping("/pedido/{id}")
-    public PedidoTable atualizar (@PathVariable Long id, @RequestBody PedidoTable modelPed) {
-    modelPed.setIdPedido(id);
+    @PutMapping("/pedido/{idPedido}")
+    public PedidoTable atualizar (@PathVariable Long idPedido, @RequestBody PedidoTable modelPed) {
+    modelPed.setIdPedido(idPedido);
     repository.save(modelPed);
     return modelPed;
     }
     
-    @DeleteMapping ("/pedido/{id}")
+    @DeleteMapping ("/pedido/{idPedido}")
     public void delete (@PathVariable Long idPedido) {
     	repository.deleteById(idPedido);
     }
