@@ -1,14 +1,20 @@
 package com.reciclo.ecosustentaveis.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 
 @Entity
 @Table(name="produto")
@@ -37,30 +43,24 @@ public class ProdutoTable{
 	private double produtoPeso;
 	
 	@ManyToOne
-	@JsonIgnoreProperties(value = "produto")
+	@NotNull
 	private CategoriaTable categoria;
-	
-	
-
-	public ProdutoTable(Long idProduto, String produtoNome, double preco, String produtoFoto, String produtoDescricao,
-			int produtoEstoque, double produtoPeso, CategoriaTable categoria) {
-		this.idProduto = idProduto;
-		this.produtoNome = produtoNome;
-		this.preco = preco;
-		this.produtoFoto = produtoFoto;
-		this.produtoDescricao = produtoDescricao;
-		this.produtoEstoque = produtoEstoque;
-		this.produtoPeso = produtoPeso;
-		this.categoria = categoria;
-	}
+	private String produtoFornecedor;
 	
 
-	public ProdutoTable() {
-		
-		
-	}
 
-
+	@OneToMany(mappedBy = "produto",cascade = CascadeType.ALL)
+	@JsonIgnoreProperties(value = "produto")
+	private List<AvaliacaoTable> avaliacao;
+	
+	
+	
+	@OneToMany(mappedBy = "produto",cascade = CascadeType.ALL)
+	@JsonIgnore
+	private List<DetalhePedido> detalhePedido;
+	
+	public ProdutoTable() {}
+	
 
 	public Long getIdProduto() {
 		return idProduto;
@@ -126,5 +126,21 @@ public class ProdutoTable{
 		this.produtoPeso = produtoPeso;
 	}
 
+	
+	public String getProdutoFornecedor() {
+		return produtoFornecedor;
+	}
+
+	public void setProdutoFornecedor(String produtoFornecedor) {
+		this.produtoFornecedor = produtoFornecedor;
+	}
+	public List<DetalhePedido> getDetalhe() {
+		return detalhePedido;
+	}
+
+	public void setDetalhe(List<DetalhePedido> detalhe) {
+		this.detalhePedido = detalhe;
+	}
+	
 	
 }

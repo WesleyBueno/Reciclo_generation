@@ -29,7 +29,7 @@ public class ProdutoController{
 		return repository.findAll();
 	}
 	
-	@GetMapping ("/produto/id/{id}")
+	@GetMapping ("/produto/id{id}")
 	public ResponseEntity<ProdutoTable> getById(@PathVariable Long id){
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}

@@ -2,12 +2,15 @@ package com.reciclo.ecosustentaveis.model;
 
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -15,6 +18,7 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 
 @Entity
@@ -24,6 +28,10 @@ public class PedidoTable {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	@Column
 	private Long idPedido;
+	
+	@OneToMany(mappedBy = "pedido",cascade = CascadeType.ALL)
+	@JsonIgnore
+	private List<DetalhePedido> detalhePedido;
 	
 	@Column(columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -57,7 +65,17 @@ public class PedidoTable {
 	
 	@NotNull
 	@Column
-	private Double valorPedido;
+	private Double valorPedido;	
+	
+	public PedidoTable() {}
+
+	public List<DetalhePedido> getDetalhePedido() {
+		return detalhePedido;
+	}
+
+	public void setDetalhePedido(List<DetalhePedido> detalhePedido) {
+		this.detalhePedido = detalhePedido;
+	}
 
 	public Long getIdPedido() {
 		return idPedido;

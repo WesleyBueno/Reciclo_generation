@@ -28,7 +28,7 @@ public class CategoriaController {
 		return repository.findAll();
 	}
 	
-	@GetMapping("/categoria/id{id}")
+	@GetMapping("/categoria/id/{id}")
 	public ResponseEntity<CategoriaTable> getById(@PathVariable Long id){
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
@@ -42,15 +42,15 @@ public class CategoriaController {
     	return objetoCat;
     }
     @PutMapping("/categoria/{id}")
-    public CategoriaTable atualizar (@PathVariable Long idCategoria, @RequestBody CategoriaTable modelCat) {
-    modelCat.setIdCategoria(idCategoria);
+    public CategoriaTable atualizar (@PathVariable Long id, @RequestBody CategoriaTable modelCat) {
+    modelCat.setIdCategoria(id);
     repository.save(modelCat);
     return modelCat;
     }
     
     @DeleteMapping ("/categoria/{id}")
-    public void delete (@PathVariable Long idCategoria) {
-    	repository.deleteById(idCategoria);
+    public void delete (@PathVariable Long id) {
+    	repository.deleteById(id);
     }
 
     
