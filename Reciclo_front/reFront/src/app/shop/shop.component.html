@@ -1,53 +1,108 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shop</title>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-         <!---barra de navegação-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Shop</title>
+</head>
 
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Ação</a>
-                    <a class="dropdown-item" href="#">Outra ação</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Algo mais aqui</a>
+<body>
+
+    <!---barra de navegação-->
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">(Re)ciclo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Contato</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </nav>
+
+    <!---/barra de navegação-->
+
+
+
+    <div class="container">
+
+        <!--Cards-->
+        <div class="quadro w-100">
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Produto</h5>
+                        <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como
+                            uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
+                        <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                    </div>
                 </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Desativado</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
+                <div class="card">
+                    <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Produto</h5>
+                        <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma
+                            introdução a um conteúdo adicional.</p>
+                        <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Produto</h5>
+                        <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma
+                            introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro,
+                            para mostrar a altura igual, em ação.</p>
+                        <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Cards-->
+
     </div>
-</nav>
 
- <!---/barra de navegação-->
 
-        
-    </body>
-    </html>
+
+    <script>
+        $('.btn').click(function () {
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+        });
+        $('.feat-btn').click(function () {
+            $('sidebar ul .feat-show').toggleClass("show");
+            $('sidebar ul .first').toggleClass("rotate");
+        });
+        $('.serv-btn').click(function () {
+            $('sidebar ul .serv-show').toggleClass("show1");
+            $('sidebar ul .second').toggleClass("rotate");
+        });
+        $('sidebar ul li').click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+
+</body>
+
+</html>

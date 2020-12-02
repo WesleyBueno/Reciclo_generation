@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.quadro{
+    margin-top: 100px;
+    display: flex;
+    background-color: #F5F5F5;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.2);
+
+}
+
+.card-deck{
+    display: flex;
+    flex-flow: row;
+}
+
+.navbar{
+    background-color: #16B978;
+}
+
+.navbar a{
+    text-align: center;
+    color: aliceblue;
+}
+
+.card{
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+}
+
