@@ -1,0 +1,9 @@
+.social-network{
+    list-style: none;
+    display: inline;
+
+
+}
+.faInstagram, .faGithub, .faLinkedin{
+    color: black;
+}
