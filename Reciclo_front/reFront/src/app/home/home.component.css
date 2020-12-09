@@ -10,5 +10,9 @@
 }
 .texto{
     font-size: 20pt;
-    color: green;
+    color: green;}
+
+
+.container p{
+    font-size: 20px;
 }
