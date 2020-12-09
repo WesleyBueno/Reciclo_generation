@@ -17,6 +17,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { ControleComponent } from './controle/controle.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 
@@ -32,13 +35,17 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     PaginaUsuarioComponent,
     NavbarComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    PostCategoriaComponent,
+    ControleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     FontAwesomeModule,
+    HttpClientModule,
+    OrderModule
 
   ],
   providers: [],

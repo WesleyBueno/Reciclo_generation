@@ -1,0 +1,133 @@
+<div class="container">
+
+
+    <div class="col-md-8">
+        <h3 class="text-center mb-4 text-monospace">Cadastrar novos produtos.</h3>
+        <div class="form-group">
+            <label class="text-monospace" for="titulo">Nome do produto</label>
+            <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome do produto" [(ngModel)]='produto.produtoNome'>
+        </div>
+
+        <div class="form-group">
+            <label class="text-monospace" for="texto">Descrição:</label>
+            <textarea class="form-control" id="descricao" rows="3" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.produtoDescricao'></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="text-monospace" for="texto">Fornecedor:</label>
+            <textarea class="form-control" id="fornecedor" rows="3" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.fornecedor'></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="text-monospace" for="texto">Foto do produto:</label>
+            <textarea class="form-control" id="foto" rows="3" placeholder="Insira a imagem do produto aqui" [(ngModel)]='produto.produtoFoto'></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="text-monospace" for="texto">Estoque:</label>
+            <textarea class="form-control" id="estoque" rows="3" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.produtoEstoque'></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="text-monospace" for="texto">Peso:</label>
+            <textarea class="form-control" id="peso" rows="3" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.produtoPeso'></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="text-monospace" for="texto">Preço:</label>
+            <textarea class="form-control" id="preco" rows="3" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.preco'></textarea>
+        </div>
+
+
+
+        <div class="row d-flex align-itens-end">
+            <div class="col-md-6">
+                <div class="form-group m-0">
+                    <label class="text-monospace" for="tema">Escolha uma categoria ou<a
+                            routerLink="/cadastrar-categoria">Cadastre uma nova</a></label>
+                    <select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'categoria' (change) = 'findByIdCategoria()'>
+                        <option *ngFor = 'let item of listaCategorias' value = {{item.idCategoria}} >
+                            {{item.categoriaDescricao}}
+                            
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex jsutify-content-end">
+                <button type="button" class="btn btn-outline-info w-25" (click)='publicar()'>Publicar</button>
+            </div>
+        </div>
+
+        <hr class="mt-5 mb-5">
+
+        <nav class="d-flex justify-content-center">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab"
+                    data-toggle="tab" href="#meus-produtos" role="tab" aria-controls="nav-home"
+                    aria-selected="true">Meu produtos</a>
+
+                <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab"
+                    href="#postagens-temas" role="tab" aria-controls="nav-profile" aria-selected="false">Produtos
+                    por categoria</a>
+            </div>
+        </nav>
+
+        <div class="tab-content" id="nav-tabContent">
+
+            <div class="tab-pane fade show active" id="meus-produtos" role="tabpanel"
+                aria-labelledby="nav-postagens-tab">
+                <div class="row mt-3 mb-3">
+                    <input class="form-control w-100" type="search" placeholder="Pesquisar postagem"
+                        aria-label="Pesquisar">
+                    <div class="col-md-2 pl-0">
+                        <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <div class="card mt-5" *ngFor = 'let item of listaProdutos | orderBy : key : reverse'>
+                            <div class="card-header">
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-md-8">
+                                        <h5 class="card-title">{{item.nome}}</h5>
+                                        <small>categoria:{{item.categoria.descricao}}</small>
+                                    </div>
+                                    <div class="col-md-4 d-flex justify-content-end">
+
+                                        <button class="mr-3 btn btn-outline-info">
+                                            Editar
+                                        </button>
+
+                                        <button class="btn btn-outline-danger ml-3">
+                                            Apagar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text" aria-describedby="texto"> {{item.texto}} </p>
+                                <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">Postado em {{item.data | date: 'dd/MM/yyyy'}} ás {{item.data | date: 'HH:mm'}}</small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="produtos-categorias" role="tabpanel" aria-labelledby="nav-presenca-tab">
+                <div class="row">
+                    <input class="form-control w-100" type="search" placeholder="Pesquisar produto"
+                        aria-label="Pesquisar">
+                    <div class="col-md-2 pl-0">
+                        <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
