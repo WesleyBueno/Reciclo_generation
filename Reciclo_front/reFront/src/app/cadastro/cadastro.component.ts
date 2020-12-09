@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { User } from '../model/User';
+import { UsuarioTable } from '../model/UsuarioTable';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit {
-  user: User= new User()
-  senha!: string
+  usuario : UsuarioTable = new UsuarioTable()
+  usuarioSenha!: string
 
   constructor(
     private authService: AuthService,
@@ -20,16 +20,16 @@ export class CadastroComponent implements OnInit {
   ngOnInit() {
   }
   conferirSenha(event:any){
-    this.senha= event.target.value
+    this.usuarioSenha= event.target.value
   }
 cadastrar(){
-  if(this.senha===this.user.senha){
-    this.authService.cadastrar(this.user).subscribe((resp: User)=>{
-      this.user=resp
+  if(this.usuarioSenha===this.usuario.usuarioSenha){
+    this.authService.cadastrar(this.usuario).subscribe((resp: UsuarioTable)=>{
+      this.usuario=resp
       this.router.navigate(['/login'])
       alert('Usuário cadastrado com sucesso!')
     })
   }else {
-    alert('Suas senhas não Conferem')
+    alert('Suas senhas não conferem')
   }
 }}
