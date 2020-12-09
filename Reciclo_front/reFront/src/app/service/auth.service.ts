@@ -12,10 +12,10 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLoginTable){
-    return this.http.post<UserLoginTable>('http://localhost:9000/usuarios/logar', userLoginTable)
+    return this.http.post<UserLoginTable>('http://localhost:9000/usuarios/logar', UserLoginTable)
   }
   cadastrar(user: UsuarioTable): Observable<UsuarioTable> {
-    return this.http.post<UsuarioTable>('http://localhost:9000/usuarios/cadastrar', usuarioTable)
+    return this.http.post<UsuarioTable>('http://localhost:9000/usuarios/cadastrar', UsuarioTable)
   }
   btnSair() {
     let ok = false

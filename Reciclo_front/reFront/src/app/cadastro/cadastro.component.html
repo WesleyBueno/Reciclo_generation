@@ -10,12 +10,12 @@
 
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui" [(ngModel)]='user.nome'>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui" [(ngModel)]='usuario.nome'>
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" [(ngModel)]='user.usuario'>
+                    <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" [(ngModel)]='usuario.usuarioEmail'>
                 </div>
 
                 <div class="form-group">
@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label for="senhaConf">Confirmar Senha</label>
                     <input type="password" class="form-control" id="senhaConf" placeholder="Digite a confirmação de 
-                    senha"[(ngModel)]='user.senha'>
+                    senha"[(ngModel)]='usuario.usuarioSenha'>
                 </div>
 
                 <div class="d-flex justify-content-center">
