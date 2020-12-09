@@ -10,6 +10,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { PagamentoComponent } from './pagamento/pagamento.component';
+import { CadastroPagamentoComponent } from './cadastro-pagamento/cadastro-pagamento.component';
+import { PaginaUsuarioComponent } from './pagina-usuario/pagina-usuario.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+
+
 
 @NgModule({
   declarations: [
@@ -18,6 +27,12 @@ import { NgModule } from '@angular/core';
     LoginComponent,
     CadastroComponent,
     ShopComponent,
+    PagamentoComponent,
+    CadastroPagamentoComponent,
+    PaginaUsuarioComponent,
+    NavbarComponent,
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
