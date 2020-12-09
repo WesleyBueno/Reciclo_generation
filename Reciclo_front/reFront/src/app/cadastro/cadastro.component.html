@@ -10,7 +10,7 @@
 
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui" [(ngModel)]='usuario.nome'>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui" [(ngModel)]='usuario.usuarioNome'>
                 </div>
 
                 <div class="form-group">
@@ -20,7 +20,7 @@
 
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" (input)='conferirSenha($event)'value='{{senha}}'>
+                    <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" (input)='conferirSenha($event)'value='{{usuarioSenha}}'>
                 </div>
 
                 <div class="form-group">
