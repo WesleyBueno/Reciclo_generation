@@ -11,32 +11,7 @@
 
 <body>
 
-    <!---barra de navegação-->
-    <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="#">(Re)ciclo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Contato</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
-            </form>
-        </div>
-    </nav>
 
     <!---/barra de navegação-->
 
@@ -85,23 +60,7 @@
 
 
 
-    <script>
-        $('.btn').click(function () {
-            $(this).toggleClass("click");
-            $('.sidebar').toggleClass("show");
-        });
-        $('.feat-btn').click(function () {
-            $('sidebar ul .feat-show').toggleClass("show");
-            $('sidebar ul .first').toggleClass("rotate");
-        });
-        $('.serv-btn').click(function () {
-            $('sidebar ul .serv-show').toggleClass("show1");
-            $('sidebar ul .second').toggleClass("rotate");
-        });
-        $('sidebar ul li').click(function () {
-            $(this).addClass("active").siblings().removeClass("active");
-        });
-    </script>
+    
 
 </body>
 

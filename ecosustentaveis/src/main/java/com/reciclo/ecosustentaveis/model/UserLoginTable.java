@@ -2,7 +2,7 @@ package com.reciclo.ecosustentaveis.model;
 
 public class UserLoginTable {
 
-private String nome;
+	private String nome;
 	
 	private String usuario;
 	

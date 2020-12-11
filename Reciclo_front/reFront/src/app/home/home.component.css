@@ -1,11 +1,17 @@
-.navbar{
-    background-color: #16B978;
-    
-}
+.parallax{
+    background-image: url('https://i.imgur.com/BecMrwm.jpg');
 
-.navbar a {
-    color: white;
+    min-height: 500px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover ;
 }
+.texto{
+    font-size: 20pt;
+    color: green;}
+
 
 .container p{
     font-size: 20px;
