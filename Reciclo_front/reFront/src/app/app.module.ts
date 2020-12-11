@@ -20,6 +20,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { ControleComponent } from './controle/controle.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { ContatoComponent } from './contato/contato.component';
+  import { from } from 'rxjs';
 
 
 
@@ -37,7 +39,8 @@ import { OrderModule } from 'ngx-order-pipe';
     FooterComponent,
     SidebarComponent,
     PostCategoriaComponent,
-    ControleComponent
+    ControleComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
