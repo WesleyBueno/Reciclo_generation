@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "reFront"
+  "defaultProject": "reFront",
+  "cli": {
+    "analytics": "715833a8-834f-4b9a-9ea2-05bd5a35856c"
+  }
 }
