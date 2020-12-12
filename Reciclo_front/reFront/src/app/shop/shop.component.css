@@ -176,6 +176,7 @@
     border-radius: 17px;
     transition: 0.3s;
     padding-top: 10px;
+    margin: 10px;
 }
 
 .wrapper .btns a:hover{
