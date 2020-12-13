@@ -1,67 +1,120 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Shop</title>
-</head>
-
-<body>
 
 
 
-    <!---/barra de navegação-->
-
-
+<div class="quadro d-flex">
 
     <div class="container">
 
-        <!--Cards-->
-        <div class="quadro w-100">
-            <div class="card-deck">
-                <div class="card">
-                    <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como
-                            uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-                        <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+        <!--Começo do container-->
+        <div class="image" alt="">
+            <img src="assets/smartmockups_kilta9ke.jpg">
+            <!--Imagem do card-->
+        </div>
+        <div class="card-content">
+            <!--Inicio do conteúdo do card-->
+            <div class="wrapper">
+                <div class="title">Camiseta Beija-flor</div>
+                <p>Unisex</p>
+                <div class="price">R$39,99</div>
+                <div class="content-size">
+                    <!--Tamanhos-->
+                    <div class="name size-name">Tamanhos</div>
+                    <div class="size-value">
+                        <span class="color">PP</span>
+                        <span class="color">P</span>
+                        <span class="active">M</span>
+                        <span class="color">G</span>
+                        <span class="color">GG</span>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma
-                            introdução a um conteúdo adicional.</p>
-                        <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                <div class="content-colour">
+                    <!--Cores-->
+                    <div class="name colour-name">Fornecedor</div>
+                    <div class="colour-value">
+                        <p>Pláticos modas</p>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">Produto</h5>
-                        <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma
-                            introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro,
-                            para mostrar a altura igual, em ação.</p>
-                        <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
-                    </div>
+                <div class="btns">
+                    <!--Botões-->
+                    <a routerLink="/pagamento">Comprar agora</a>
+                    <a (click)="info()">Mais informações</a>
+
                 </div>
             </div>
-
+            <!--fim do conteúdo do card-->
         </div>
+    </div>
 
-        <!--Cards-->
+    <div class="container">
 
+        <!--Começo do container-->
+        <div class="image">
+            <img src="assets/smartmockups_kilspfd7.jpg"
+                alt="">
+            <!--Imagem do card-->
+        </div>
+        <div class="card-content">
+            <!--Inicio do conteúdo do card-->
+            <div class="wrapper">
+                <div class="title">Caneca estampada</div>
+                <p>250ml</p>
+                <div class="price">R$29,99</div>
+                <div class="content-colour">
+                    <!--Cores-->
+                    <div class="name colour-name">Fornecedor</div>
+                    <div class="colour-value">
+                        <p>Metal natureza</p>
+                    </div>
+                </div>
+                <div class="btns">
+                    <!--Botões-->
+                    <a routerLink="/pagamento">Comprar agora</a>
+
+                </div>
+            </div>
+            <!--fim do conteúdo do card-->
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!--Começo do container-->
+        <div class="image">
+            <img src="assets/smartmockups_kilslqyr.jpg"
+                alt="">
+            <!--Imagem do card-->
+        </div>
+        <div class="card-content">
+            <!--Inicio do conteúdo do card-->
+            <div class="wrapper">
+                <div class="title">Copo estampado</div>
+                <p>500ml</p>
+                <div class="price">R$39,99</div>
+                <div class="content-colour">
+                    <!--Cores-->
+                    <div class="name colour-name">Fornecedor</div>
+                    <div class="colour-value">
+                        <p>Metal natureza</p>
+                    </div>
+                </div>
+                <div class="btns">
+                    <!--Botões-->
+                    <a routerLink="/pagamento">Comprar agora</a>
+
+                </div>
+            </div>
+            <!--fim do conteúdo do card-->
+        </div>
     </div>
 
 
-
+    
+            <!--fim do conteúdo do card-->
+        
     
 
-</body>
 
-</html>
+
+</div>
+
+

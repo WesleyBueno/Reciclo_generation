@@ -5,4 +5,15 @@
 .navbar a{
     text-align: center;
     color: aliceblue;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color: rgb(0, 0, 0);
+}
+
+.navegacao{
+    margin-right: 400px;
+    display: flex;
+    flex-direction: row;
 }

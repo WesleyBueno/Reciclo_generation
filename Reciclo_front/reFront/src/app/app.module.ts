@@ -25,6 +25,7 @@ import { ContatoComponent } from './contato/contato.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

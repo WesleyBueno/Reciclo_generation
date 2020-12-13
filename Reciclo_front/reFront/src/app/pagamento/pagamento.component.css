@@ -1,0 +1,60 @@
+.jumbotron {
+    background-color: #beffc7;
+    text-align: center;
+}
+
+.container{
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    box-shadow: -1px -1px 6px rgba(0, 0,0,0.2);
+    border-radius: 18px;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 200px;
+}
+
+p{
+    font-size: 17px;
+    font-weight: 500;
+    color: grey;
+    padding-left: 280px;
+    margin-bottom: 50px;
+}
+
+
+
+.container button{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+/*Estilização dos botões*/
+.container  button{
+    text-align: center;
+    text-decoration: none;
+    width: 755px;
+    height: 40px;
+    border: 2px solid #01b16b;
+    background:#16B978;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: 0.3s;
+    
+}
+
+.container  button:hover{
+    background-color: #fff;
+    border-color:  #01b16b;
+    color: #16B978;
+}
