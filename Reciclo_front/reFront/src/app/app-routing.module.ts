@@ -10,6 +10,7 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
 import { PaginaUsuarioComponent } from './pagina-usuario/pagina-usuario.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { ShopComponent } from './shop/shop.component';
+import {ContatoComponent} from './contato/contato.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'cadastro' , component: CadastroComponent},
   { path: 'cadastro-pagamento', component: CadastroPagamentoComponent},
   { path: 'carrinho', component: CarrinhoComponent},
+  {path:'contato', component: ContatoComponent},
   { path: 'login', component: LoginComponent},
   { path: 'pagamento', component: PagamentoComponent},
   { path: 'post-categoria', component: PostCategoriaComponent}
