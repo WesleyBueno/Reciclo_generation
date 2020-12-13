@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.quadro{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.container{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    height: 500px;
+    width: 380px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+
+
+
+.container .image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Estrutura da imagem dentro da classe imagem*/
+.container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+/*Efeito de aumento de tamanho*/
+.container:hover .image img{
+    transform: scale(1.1);
+}
+
+/*Estrutura do card*/
+.container .card-content{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/*Estrutura do conteúdo do card*/
+.card-content .wrapper{
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    bottom: -100%;
+    padding: 10px 25px;
+    box-shadow: -1px -1px 6px rgba(0, 0,0,0.2);
+    transition: bottom 0.3s ease;
+}
+
+/*Efeito de abertura do card*/
+.container:hover .wrapper{
+    bottom: 0px;
+}
+
+/*estrutura do titulo do card*/
+.wrapper .title{
+    font-size: 22px;
+    font-weight: 500px;
+}
+
+/*Estrutura do paragrafo do card*/
+.wrapper p{
+    font-size: 17px;
+    font-weight: 500;
+    color: grey;
+}
+
+/*Estrutura do preço*/
+.wrapper .price{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    color: #16B978;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+/*Margem do conteúdo do card*/
+.wrapper .content{
+    margin: 5px 0;
+}
+
+/*Estilização do texto do card*/
+.wrapper .content .name{
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/*Estrutura dos tamanhos*/
+.card-content .size-value{
+    display: flex;
+    width: 50%;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+
+/*Estilização dos tamanhos*/
+.card-content .size-value span{
+    display: block;
+    height: 28px;
+    width: 28px;
+    text-align: center;
+    color: #16B978;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+/*Estilização do tamanho com a classe Active*/
+.card-content .size-value span.active{
+    background: #16B978;
+    color: #fff;
+}
+
+/*Estrutura das cores*/
+.card-content .colour-value{
+    display: flex;
+    width: 30%;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+/*Estilização das cores */
+.card-content .colour-value span{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+/*Estrutura dos botões*/
+.wrapper .btns{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Estilização dos botões*/
+.wrapper .btns a{
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 50%;
+    border: 2px solid #01b16b;
+    background: #16B978;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: 0.3s;
+    padding-top: 10px;
+    margin: 10px;
+}
+
+.wrapper .btns a:hover{
+    background-color: #fff;
+    border-color: #01b16b;
+    color: #16B978;
+}
+
+

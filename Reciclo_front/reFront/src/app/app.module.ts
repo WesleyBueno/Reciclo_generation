@@ -22,6 +22,9 @@ import { ControleComponent } from './controle/controle.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { ContatoComponent } from './contato/contato.component';
   import { from } from 'rxjs';
+import { UtilitariosComponent } from './utilitarios/utilitarios.component';
+import { VestuarioComponent } from './vestuario/vestuario.component';
+import { DecoracaoComponent } from './decoracao/decoracao.component';
 
 
 
@@ -41,7 +44,10 @@ import { ContatoComponent } from './contato/contato.component';
     SidebarComponent,
     PostCategoriaComponent,
     ControleComponent,
-    ContatoComponent
+    ContatoComponent,
+    UtilitariosComponent,
+    VestuarioComponent,
+    DecoracaoComponent
   ],
   imports: [
     BrowserModule,

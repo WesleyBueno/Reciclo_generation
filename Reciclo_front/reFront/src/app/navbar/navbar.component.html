@@ -1,12 +1,10 @@
+<!---barra de navegação-->
 
 
-        <!---barra de navegação-->
-
-
-    <nav class="navbar navbar-expand-lg  ">
+<nav class="navbar navbar-expand-lg  ">
     <a class="navbar-brand" href="#">(Re)ciclo</a>
 
-    
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -15,47 +13,55 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink='/shop'>Shop</a>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" routerLink='#' id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Categorias
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink='/vestuario'>Vestuário</a>
+                    <a class="dropdown-item" routerLink='/decoracao'>Decoração</a>
+                    <a class="dropdown-item" routerLink='/utilitarios'>Utilitários</a>
+                </div>
+            </li>
             <li class="nav-item">
                 <a class="nav-link " routerLink='/contato'>Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " routerLink='/carrinho'>Carinho</a>
+                <a class="nav-link " routerLink='/carrinho'>Carrinho</a>
             </li>
-            
+
 
         </ul>
 
         <div class="navegacao">
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2 " type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
-    </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 " type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+        </div>
 
 
         <div *ngIf='auth.btnLogin()'>
-            
-                <a class="btn btn-outline-light mr-2" routerLink='/login'>login</a>
-        
+
+            <a class="btn btn-outline-light mr-2" routerLink='/login'>login</a>
+
         </div>
 
         <div *ngIf='auth.btnLogin()'>
-            
-                <a class="btn btn-outline-light mr-2" routerLink='/cadastro'>Cadastro</a>
-            
+
+            <a class="btn btn-outline-light mr-2" routerLink='/cadastro'>Cadastro</a>
+
         </div>
 
         <div *ngIf='auth.btnSair()'>
-                        
+
             <a class="btn btn-outline-light mr-2" (click)='sair()'>Sair</a>
-    
-    </div>
+
+        </div>
 
 
     </div>
 </nav>
 
 <!--/Barra de navegação-->
-
-    
-
