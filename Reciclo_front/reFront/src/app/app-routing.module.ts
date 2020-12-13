@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'pagamento', component: PagamentoComponent},
   { path: 'post-categoria', component: PostCategoriaComponent}
+  
 ];
 
 @NgModule({
