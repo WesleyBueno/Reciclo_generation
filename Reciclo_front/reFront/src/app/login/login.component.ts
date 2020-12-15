@@ -34,23 +34,21 @@ export class LoginComponent implements OnInit {
       {
         this.userLogin = resp
         // Armazena o token no loacalStorage
-        localStorage.setItem('token', this.userLogin.token)        
+        localStorage.setItem('token', this.userLogin.token)   
+        this.acesso()        
         // vai para o componente shop
         this.router.navigate(['/shop'])
       }
       else
         alert("Email ou senha incorreto!")      
     })
-    
-    this.acesso()
-    
+            
   }
 
   acesso()
   {
     this.usuarioService.findIdByEmail(this.userLogin.usuario).subscribe((resp: UsuarioTable) => {
       this.usuario = resp
-      console.log(this.usuario.usuarioTipo)
       localStorage.setItem('acesso', this.usuario.usuarioTipo)
     })
   }

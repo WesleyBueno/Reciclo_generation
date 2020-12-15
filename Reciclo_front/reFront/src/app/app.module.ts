@@ -55,7 +55,8 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     FontAwesomeModule,
     HttpClientModule,
-    OrderModule
+    OrderModule,
+    CommonModule
 
   ],
   providers: [],
