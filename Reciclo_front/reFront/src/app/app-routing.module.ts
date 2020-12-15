@@ -15,6 +15,8 @@ import { UtilitariosComponent } from './utilitarios/utilitarios.component';
 import { DecoracaoComponent } from './decoracao/decoracao.component';
 import { VestuarioComponent } from './vestuario/vestuario.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SobreComponent } from './sobre/sobre.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch:'full'},
@@ -28,10 +30,13 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'pagamento', component: PagamentoComponent},
   { path: 'post-categoria', component: PostCategoriaComponent},
+  
+  { path: 'post-categoria', component: PostCategoriaComponent},
   { path: 'utilitarios' , component: UtilitariosComponent},
   { path: 'decoracao' , component: DecoracaoComponent},
   { path: 'vestuario' , component: VestuarioComponent},
-  { path:'sidebar', component: SidebarComponent}
+  { path:'sidebar', component: SidebarComponent},
+  { path: 'sobre' , component: SobreComponent}
 
 ];
 

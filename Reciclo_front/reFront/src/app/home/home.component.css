@@ -4,6 +4,10 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
 
+.jumbotron {
+    background-color: #16B978;
+    text-align: center;
+}
 
 .texto{
     font-size: 20pt;
@@ -14,12 +18,13 @@
     margin-bottom: 40px;
     position: relative;
     height: 100%;
-    width: 380px;
+    width: 100%;
     background: #fff;
     overflow: hidden;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     margin-left: 180px;
+    
 }
 
 .container p{
