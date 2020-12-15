@@ -10,7 +10,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastroComponent implements OnInit {
   usuario : UsuarioTable = new UsuarioTable()
-  usuarioSenha!: string
+  senha!: string
 
   constructor(
     private authService: AuthService,
@@ -20,10 +20,10 @@ export class CadastroComponent implements OnInit {
   ngOnInit() {
   }
   conferirSenha(event:any){
-    this.usuarioSenha= event.target.value
+    this.senha= event.target.value
   }
 cadastrar(){
-  if(this.usuarioSenha===this.usuario.usuarioSenha){
+  if(this.senha===this.usuario.usuarioSenha){
     this.authService.cadastrar(this.usuario).subscribe((resp: UsuarioTable)=>{
       this.usuario=resp
       this.router.navigate(['/login'])

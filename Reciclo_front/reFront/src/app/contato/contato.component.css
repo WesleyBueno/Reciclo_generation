@@ -1,0 +1,11 @@
+.container{
+    border-radius: 18px;
+    box-shadow: 0px 0px 27px -7px rgba(0,0, 0, 0.2);
+    margin-top: 50px;
+}
+.container h1{
+    margin-top: 20px;
+}
+.container button{
+    margin-bottom: 50px;
+}

@@ -10,6 +10,10 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
 import { PaginaUsuarioComponent } from './pagina-usuario/pagina-usuario.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { ShopComponent } from './shop/shop.component';
+import {ContatoComponent} from './contato/contato.component';
+import { UtilitariosComponent } from './utilitarios/utilitarios.component';
+import { DecoracaoComponent } from './decoracao/decoracao.component';
+import { VestuarioComponent } from './vestuario/vestuario.component';
 
 
 const routes: Routes = [
@@ -20,10 +24,16 @@ const routes: Routes = [
   { path: 'cadastro' , component: CadastroComponent},
   { path: 'cadastro-pagamento', component: CadastroPagamentoComponent},
   { path: 'carrinho', component: CarrinhoComponent},
+  {path:'contato', component: ContatoComponent},
   { path: 'login', component: LoginComponent},
   { path: 'pagamento', component: PagamentoComponent},
-  { path: 'post-categoria', component: PostCategoriaComponent}
+  { path: 'post-categoria', component: PostCategoriaComponent},
   
+  { path: 'post-categoria', component: PostCategoriaComponent},
+  { path: 'utilitarios' , component: UtilitariosComponent},
+  { path: 'decoracao' , component: DecoracaoComponent},
+  { path: 'vestuario' , component: VestuarioComponent}
+
 ];
 
 @NgModule({

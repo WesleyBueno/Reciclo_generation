@@ -1,9 +1,31 @@
+footer{
+    background-color:#16B978 ;
+    
+}
 .social-network{
     list-style: none;
     display: inline;
+    margin-top: 10px;
 
 
 }
-.faInstagram, .faGithub, .faLinkedin{
-    color: black;
+.faInstagram, .faFacebook, .faLinkedin{
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.faInstagram:hover{
+    color: #f515aa;
+}
+
+.faFacebook:hover{
+    color: #2834dd;
+}
+
+.faLinkedin:hover{
+    color: #184bf3;
+}
+
+p{
+    color: white;
 }

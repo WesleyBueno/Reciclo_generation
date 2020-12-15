@@ -1,39 +1,47 @@
-.parallax{
-    background-image: url('https://i.imgur.com/BecMrwm.jpg');
-
-    min-height: 500px;
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover ;
-}
-.texto{
-    font-size: 20pt;
-    color: green;}
-
-
-.container p{
-    font-size: 20px;
-}
-
 /*formatação de animação*/
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
 
+.jumbotron {
+    background-color: #FFD5BE;
+    text-align: center;
+}
+
+.texto{
+    font-size: 20pt;
+    color: green;}
+
+.container{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    margin-left: 180px;
+    
+}
+
+.container p{
+    font-size: 20px;
+}
+
 /*ZERANDO A MARGEM(BORDA DA IMAGEM PRINCIPAL)*/
 *{
     margin: 0; 
     padding: 0;
 }
- header{
-     width: 132%;
-     height: 150vh;/* <-ALTURA DA VISUALIZAÇÃO*/
-     overflow: hidden;/*TIRA A BARRA DE ROLAGEM DO FINAL PARA QUE NÃO FIQUE MAIOR DO QUE A TELA*/
-     position: relative;/*REPOSICIONANDO O TEXTO DO BANNER*/
- }
+header{
+    width: 100%;
+    height: 700px;/* <-ALTURA DA VISUALIZAÇÃO*/
+    overflow: hidden;/*TIRA A BARRA DE ROLAGEM DO FINAL PARA QUE NÃO FIQUE MAIOR DO QUE A TELA*/
+    position: relative;/*REPOSICIONANDO O TEXTO DO BANNER*/
+}
 
 /*ENVELOPANDO A IMAGEM*/
 .img-wrapper{
@@ -112,3 +120,53 @@
             opacity: 1;
         }
     }
+
+    .card-footer .btns{
+        display: flex;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /*Estilização dos botões*/
+    .card-footer .btns a{
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        height: 50%;
+        border: 2px solid #01b16b;
+        background:  #16B978;
+        outline: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 900;
+        cursor: pointer;
+        border-radius: 17px;
+        transition: 0.3s;
+        padding-top: 10px;
+        margin: 10px;
+    }
+    
+    .card-footer .btns a:hover{
+        background-color: #fff;
+        color:  #16B978;
+        
+    }
+    
+    .card-deck{
+        width: 100%;
+        height: 100%;
+        
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px;
+    }
+    
+    .card{
+        margin: 20px;
+    }
+
+    
+    
