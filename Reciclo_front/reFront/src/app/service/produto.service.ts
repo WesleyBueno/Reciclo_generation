@@ -20,10 +20,19 @@ export class ProdutoService {
   }
 
   getByIdProdutos(id : number):Observable<ProdutoTable>{
-    return this.http.get<ProdutoTable>(`http://localhost:8080/produto/id${id}`)
+    return this.http.get<ProdutoTable>(`http://localhost:8080/produto/id${id}`, this.token)
   }
 
   postProduto(produto: ProdutoTable):Observable<ProdutoTable>{
-    return this.http.post<ProdutoTable>('http://localhost:8080/produto',produto)
+    return this.http.post<ProdutoTable>('http://localhost:8080/produto',produto, this.token)
+  }
+  putProduto(id: number):Observable<ProdutoTable>{
+    return this.http.put<ProdutoTable>(`http://localhost:8080/produto/${id}`, this.token)
+  }
+  deleteProduto(id: number):Observable<ProdutoTable>{
+    return this.http.delete<ProdutoTable>(`http://localhost:8080/produto/${id}`, this.token)
+  }
+  getByNomeProduto(produtoNome: string):Observable<ProdutoTable[]>{
+    return this.http.get<ProdutoTable[]>(`http://localhost:8080/produto/nome/${produtoNome}`, this.token)
   }
 }

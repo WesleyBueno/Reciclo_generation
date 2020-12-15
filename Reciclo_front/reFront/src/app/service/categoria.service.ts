@@ -25,4 +25,13 @@ export class CategoriaService {
   postCategoria(categoria: CategoriaTable):Observable<CategoriaTable>{
     return this.http.post<CategoriaTable>('http://localhost:8080/categoria',categoria,this.token)
   }
+  putCategoria(id : number):Observable<CategoriaTable>{
+    return this.http.put<CategoriaTable>(`http://localhost:8080/categoria/${id}` , this.token)
+  }
+  deleteCategoria(id : number):Observable<CategoriaTable>{
+    return this.http.delete<CategoriaTable>(`http://localhost:8080/categoria/${id}`, this.token)
+  }
+  getByNomeCategoria(categoriaNome : string):Observable<CategoriaTable[]>{
+    return this.http.get<CategoriaTable[]>(`http://localhost:8080/categoria/${categoriaNome}`, this.token)
+  }
 }
