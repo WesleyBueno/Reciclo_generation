@@ -1,0 +1,18 @@
+
+.row h1{
+    margin-top: 50px;
+    }
+    
+    .container{
+        margin-top: 50px;
+        width: 100%;
+        height: 100%;
+        box-shadow: -1px -1px 6px rgba(0, 0,0,0.2);
+        border-radius: 18px;
+    }
+    
+    .card{
+        margin-top: 50px;
+        box-shadow: -1px -1px 6px rgba(0, 0,0,0.2);
+        border-radius: 18px;
+    }

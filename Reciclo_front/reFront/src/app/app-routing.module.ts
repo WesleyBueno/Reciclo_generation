@@ -27,12 +27,17 @@ const routes: Routes = [
   {path:'contato', component: ContatoComponent},
   { path: 'login', component: LoginComponent},
   { path: 'pagamento', component: PagamentoComponent},
+<<<<<<< HEAD
   { path: 'post-categoria', component: PostCategoriaComponent},
   { path: 'utilitarios' , component: UtilitariosComponent},
   { path: 'decoracao' , component: DecoracaoComponent},
   { path: 'vestuario' , component: VestuarioComponent},
   { path:'sidebar', component: SidebarComponent}
 
+=======
+  { path: 'post-categoria', component: PostCategoriaComponent}
+  
+>>>>>>> origin/monica
 ];
 
 @NgModule({
