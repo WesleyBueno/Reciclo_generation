@@ -24,6 +24,7 @@ export class CadastroComponent implements OnInit {
   }
 cadastrar(){
   if(this.senha===this.usuario.usuarioSenha){
+    this.usuario.usuarioTipo = "USER"
     this.authService.cadastrar(this.usuario).subscribe((resp: UsuarioTable)=>{
       this.usuario=resp
       this.router.navigate(['/login'])

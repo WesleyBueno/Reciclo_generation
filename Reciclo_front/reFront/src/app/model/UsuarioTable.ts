@@ -1,5 +1,6 @@
 export class UsuarioTable {
     public idUsuario!: number
+    public usuarioTipo!: string    
     public usuarioNome!: string
     public usuarioNascimento!: string
     public usuarioEndCep!: string

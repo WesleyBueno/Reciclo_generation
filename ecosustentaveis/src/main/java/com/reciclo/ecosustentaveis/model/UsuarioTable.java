@@ -10,6 +10,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.UniqueElements;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -18,9 +21,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class UsuarioTable {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	private long idUsuario;
+	
+	@Column
+	private String usuarioTipo;
 	
 	@Column
 	private  String usuarioNome;
@@ -52,7 +57,7 @@ public class UsuarioTable {
 	@Column
 	private  String usuarioCel;
 	
-	@Column
+	@Column(unique = true)
 	private  String usuarioEmail;
 	
 	@Column
@@ -245,6 +250,14 @@ public class UsuarioTable {
 		public void setId(Long usuarioId) {
 			// TODO Auto-generated method stub
 			
+		}
+
+		public String getUsuarioTipo() {
+			return usuarioTipo;
+		}
+
+		public void setUsuarioTipo(String usuarioTipo) {
+			this.usuarioTipo = usuarioTipo;
 		}
 		
 		

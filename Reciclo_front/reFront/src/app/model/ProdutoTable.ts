@@ -9,7 +9,7 @@ export class ProdutoTable{
     public produtoEstoque!: number /*?*/
     public produtoPeso!: number
     public categoria! : CategoriaTable
-    public fornecedor! : string
+    public produtoFornecedor!: string
 
 
 

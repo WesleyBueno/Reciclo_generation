@@ -146,7 +146,38 @@
         </div>
     </div>
 
+    <!--  -->
 
+    <div class="container" *ngFor='let item of listaProdutos'>
+
+        <!--Começo do container-->
+        <div class="image">
+            <img src="{{item.produtoFoto}}" alt="">
+            <!--Imagem do card-->
+        </div>
+        <div class="card-content">
+            <!--Inicio do conteúdo do card-->
+            <div class="wrapper" >
+                <div class="title">{{item.produtoNome}}</div>
+                <p>500ml</p>
+                <div class="price">{{item.preco}}</div>
+                <div class="content-colour">
+                    <!--Cores-->
+                    <div class="name colour-name">Fornecedor</div>
+                    <div class="colour-value">
+                        <p>{{item.produtoFornecedor}}</p>
+                    </div>
+                </div>
+                <div class="btns">
+                    <!--Botões-->
+                    <a routerLink="/pagamento">Comprar agora</a>
+
+                </div>
+            </div>
+            <!--fim do conteúdo do card-->
+        </div>
+    </div>
+    
 
     <!--fim do conteúdo do card-->
 
@@ -155,3 +186,4 @@
 
 
 </div>
+

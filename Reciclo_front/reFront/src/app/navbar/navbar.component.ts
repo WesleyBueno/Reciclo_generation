@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
+import { SidebarComponent } from "../sidebar/sidebar.component";
+
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +16,9 @@ export class NavbarComponent implements OnInit {
     public auth: AuthService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {         
+    
   }
 
   sair(){

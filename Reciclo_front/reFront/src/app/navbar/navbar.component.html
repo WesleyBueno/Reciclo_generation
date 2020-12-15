@@ -1,10 +1,7 @@
 <!---barra de navegação-->
-
-
-<nav class="navbar navbar-expand-lg  ">
+<nav class="navbar navbar-expand-lg  ">    
+    
     <a class="navbar-brand" href="#">(Re)ciclo</a>
-
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -41,6 +38,12 @@
             </form>
         </div>
 
+
+        <div *ngIf='auth.btnCadProd()'>
+        
+            <a class="btn btn-outline-light mr-2" routerLink=''>Produto</a>
+        
+        </div>
 
         <div *ngIf='auth.btnLogin()'>
 

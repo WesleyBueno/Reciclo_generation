@@ -30,7 +30,7 @@ public class UsuarioController {
 	private UsuarioRepository repository;
 
 	@Autowired
-	private UsuarioService usuarioService;
+	private UsuarioService usuarioService;	
 	
 	@GetMapping ("/usuario")
 	public List<UsuarioTable> findAll(){
@@ -46,6 +46,12 @@ public class UsuarioController {
         return repository.findByusuarioEmail(usuarioEmail);
     }
     
+	@GetMapping("/usuario/email/{usuarioEmail}")
+	public UsuarioTable findIdByEmail(@PathVariable String usuarioEmail) 
+	{
+		return repository.findIdByEmail(usuarioEmail);
+	}
+	
     @PostMapping("/usuario")
     public UsuarioTable criar (@RequestBody UsuarioTable objetoUser) {
     	repository.save(objetoUser);
@@ -56,7 +62,14 @@ public class UsuarioController {
     @PostMapping("usuario/logar")
     public ResponseEntity<UserLoginTable> aut(@RequestBody Optional<UserLoginTable> user)
     {
-    	return usuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+    	try 
+    	{
+    		return usuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+    	}
+    	catch(Exception e) 
+    	{
+    		return null;
+    	}
     }
     
 	@PostMapping("usuario/cadastrar")

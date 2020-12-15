@@ -14,7 +14,7 @@ import {ContatoComponent} from './contato/contato.component';
 import { UtilitariosComponent } from './utilitarios/utilitarios.component';
 import { DecoracaoComponent } from './decoracao/decoracao.component';
 import { VestuarioComponent } from './vestuario/vestuario.component';
-
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch:'full'},
@@ -30,7 +30,8 @@ const routes: Routes = [
   { path: 'post-categoria', component: PostCategoriaComponent},
   { path: 'utilitarios' , component: UtilitariosComponent},
   { path: 'decoracao' , component: DecoracaoComponent},
-  { path: 'vestuario' , component: VestuarioComponent}
+  { path: 'vestuario' , component: VestuarioComponent},
+  { path:'sidebar', component: SidebarComponent}
 
 ];
 

@@ -11,29 +11,19 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  logar(userLogin: UserLoginTable){
+  logar(userLogin: UserLoginTable){    
     return this.http.post<UserLoginTable>('http://localhost:8080/usuario/logar', userLogin)
   }
   cadastrar(user: UsuarioTable): Observable<UsuarioTable> {
     return this.http.post<UsuarioTable>('http://localhost:8080/usuario/cadastrar', user)
   }
-  btnSair() {
-    let ok = false
-    let token = localStorage.getItem('token')
 
-    if (token != null) {
-      ok = true
-    }
-    return ok
-  }
+  btnSair() {return localStorage.getItem('token') != null}
 
-  btnLogin() {
-    let ok = false
-    let token = localStorage.getItem('token')
+  btnLogin() {return localStorage.getItem('token') == null}
 
-    if (token == null) {
-      ok = true
-    }
-    return ok
-  }
+  btnCadProd() { return localStorage.getItem('token') != null && this.acessoADM()}
+
+  acessoADM():boolean { return localStorage.getItem('acesso') == "ADM"}
+
 }

@@ -30,8 +30,8 @@ public class ProdutoTable{
 	@Column
 	private double preco;
 	
-	@Column
-	private String produtoFoto;
+	@Column(columnDefinition = "TEXT")
+	private String produtoFoto;	
 	
 	@Column
 	private String produtoDescricao;
@@ -42,12 +42,11 @@ public class ProdutoTable{
 	@Column
 	private double produtoPeso;
 	
-	@ManyToOne
-	@NotNull
+	@ManyToOne	
 	private CategoriaTable categoria;
-	private String produtoFornecedor;
 	
-
+	private String produtoFornecedor;
+		
 
 	@OneToMany(mappedBy = "produto",cascade = CascadeType.ALL)
 	@JsonIgnoreProperties(value = "produto")
@@ -140,6 +139,26 @@ public class ProdutoTable{
 
 	public void setDetalhe(List<DetalhePedido> detalhe) {
 		this.detalhePedido = detalhe;
+	}
+
+
+	public List<AvaliacaoTable> getAvaliacao() {
+		return avaliacao;
+	}
+
+
+	public void setAvaliacao(List<AvaliacaoTable> avaliacao) {
+		this.avaliacao = avaliacao;
+	}
+
+
+	public List<DetalhePedido> getDetalhePedido() {
+		return detalhePedido;
+	}
+
+
+	public void setDetalhePedido(List<DetalhePedido> detalhePedido) {
+		this.detalhePedido = detalhePedido;
 	}
 	
 	
