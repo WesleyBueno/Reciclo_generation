@@ -25,12 +25,9 @@ import { ContatoComponent } from './contato/contato.component';
 import { UtilitariosComponent } from './utilitarios/utilitarios.component';
 import { VestuarioComponent } from './vestuario/vestuario.component';
 import { DecoracaoComponent } from './decoracao/decoracao.component';
-<<<<<<< HEAD
 import { CommonModule } from '@angular/common';
-=======
 import { SobreComponent } from './sobre/sobre.component';
 
->>>>>>> origin/monica
 
 
 

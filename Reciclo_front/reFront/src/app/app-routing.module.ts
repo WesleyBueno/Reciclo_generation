@@ -16,6 +16,7 @@ import { DecoracaoComponent } from './decoracao/decoracao.component';
 import { VestuarioComponent } from './vestuario/vestuario.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { ControleComponent } from './controle/controle.component';
 
 
 const routes: Routes = [
@@ -26,17 +27,16 @@ const routes: Routes = [
   { path: 'cadastro' , component: CadastroComponent},
   { path: 'cadastro-pagamento', component: CadastroPagamentoComponent},
   { path: 'carrinho', component: CarrinhoComponent},
-  {path:'contato', component: ContatoComponent},
+  { path:'contato', component: ContatoComponent},
   { path: 'login', component: LoginComponent},
   { path: 'pagamento', component: PagamentoComponent},
-  { path: 'post-categoria', component: PostCategoriaComponent},
-  
   { path: 'post-categoria', component: PostCategoriaComponent},
   { path: 'utilitarios' , component: UtilitariosComponent},
   { path: 'decoracao' , component: DecoracaoComponent},
   { path: 'vestuario' , component: VestuarioComponent},
   { path:'sidebar', component: SidebarComponent},
-  { path: 'sobre' , component: SobreComponent}
+  { path: 'sobre' , component: SobreComponent},
+  { path: 'controle', component: ControleComponent}
 
 ];
 

@@ -16,10 +16,12 @@ export class ControleComponent implements OnInit {
   
   produto : ProdutoTable = new ProdutoTable()
   listaProdutos!: ProdutoTable[]
+  produtoNome!: string
 
   categoria: CategoriaTable = new CategoriaTable()
   listaCategorias!: CategoriaTable[]
-  idCategoria!: number;
+  idCategoria!: number
+  categoriaNome!: string
 
 
   constructor(
@@ -70,6 +72,26 @@ export class ControleComponent implements OnInit {
       this.categoria = resp;
     })
 
+  }
+
+  findByNomeProduto(){
+    if(this.produtoNome ===''){
+      this.findAllProdutos()
+    }else{
+      this.produtoService.getByNomeProduto(this.produtoNome).subscribe((resp: ProdutoTable[]) =>{
+        this.listaProdutos = resp
+      })
+    }
+  }
+
+  findByCategoriaNome(){
+    if(this.categoriaNome === ''){
+      this.findAllCategorias()
+    }else{
+      this.categoriaService.getByNomeCategoria(this.categoriaNome).subscribe((resp: CategoriaTable[]) =>{
+        this.listaCategorias = resp
+      })
+    }
   }
 
 }

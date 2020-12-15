@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriaTable } from '../model/CategoriaTable';
+import { CategoriaService } from '../service/categoria.service';
+import { ProdutoService } from '../service/produto.service';
 
 @Component({
   selector: 'app-decoracao',
@@ -7,9 +10,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DecoracaoComponent implements OnInit {
 
-  constructor() { }
+  key = 'data'
+  reverse = true
 
-  ngOnInit(): void {
+  categoria : CategoriaTable = new CategoriaTable()
+  listaCategorias!: CategoriaTable[]
+  categoriaNome!: string
+
+  constructor(
+    private produtoService : ProdutoService,
+    private categoriaService : CategoriaService,
+  ) { }
+
+  ngOnInit(){
+    window.scroll(0,0)
+    this.findByCategoriaNome()
+  }
+
+  findAllCategorias(){
+    this.categoriaService.getAllCategorias().subscribe((resp: CategoriaTable[]) =>{
+      this.listaCategorias = resp
+    })
+  }
+
+  findByCategoriaNome(){
+    if(this.categoriaNome === 'Decoração'){
+      this.findAllCategorias()
+    }else{
+      this.categoriaService.getByNomeCategoria(this.categoriaNome).subscribe((resp: CategoriaTable[]) =>{
+        this.listaCategorias = resp
+      })
+    }
   }
 
 }
