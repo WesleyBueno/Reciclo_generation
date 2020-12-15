@@ -14,6 +14,7 @@ import {ContatoComponent} from './contato/contato.component';
 import { UtilitariosComponent } from './utilitarios/utilitarios.component';
 import { DecoracaoComponent } from './decoracao/decoracao.component';
 import { VestuarioComponent } from './vestuario/vestuario.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 
 const routes: Routes = [
@@ -32,7 +33,8 @@ const routes: Routes = [
   { path: 'post-categoria', component: PostCategoriaComponent},
   { path: 'utilitarios' , component: UtilitariosComponent},
   { path: 'decoracao' , component: DecoracaoComponent},
-  { path: 'vestuario' , component: VestuarioComponent}
+  { path: 'vestuario' , component: VestuarioComponent},
+  { path: 'sobre' , component: SobreComponent}
 
 ];
 

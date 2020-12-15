@@ -25,6 +25,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { UtilitariosComponent } from './utilitarios/utilitarios.component';
 import { VestuarioComponent } from './vestuario/vestuario.component';
 import { DecoracaoComponent } from './decoracao/decoracao.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 
 
@@ -47,7 +48,8 @@ import { DecoracaoComponent } from './decoracao/decoracao.component';
     ContatoComponent,
     UtilitariosComponent,
     VestuarioComponent,
-    DecoracaoComponent
+    DecoracaoComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
