@@ -47,6 +47,8 @@ export class LoginComponent implements OnInit {
 
   acesso()
   {
+    console.log(this.userLogin.usuario)
+    console.log(this.usuarioService.findIdByEmail(this.userLogin.usuario))
     this.usuarioService.findIdByEmail(this.userLogin.usuario).subscribe((resp: UsuarioTable) => {
       this.usuario = resp
       localStorage.setItem('acesso', this.usuario.usuarioTipo)
