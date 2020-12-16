@@ -94,9 +94,9 @@ transition: 0.3s;
 }
 
 .topico{
-    background: #fffc00;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #ffffff, #fffc00);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #ffffff, #fffc00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #A1FFCE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 
 }
@@ -110,24 +110,28 @@ background: linear-gradient(to top, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Fir
 
 
 .topico2{
-    background: #C6FFDD;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #A1FFCE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     
 }
 
 .topico3{
-    background: #43C6AC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #A1FFCE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 
     .topico4{
-        background: #f79d00;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+        background: #A1FFCE;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         
+    }
+
+    .card-header{
+        color: #16B978;
     }
 
    
