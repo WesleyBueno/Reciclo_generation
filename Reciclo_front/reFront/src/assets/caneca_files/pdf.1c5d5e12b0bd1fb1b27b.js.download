@@ -1,0 +1,2 @@
+/*! Copyright (c) 2020 WhatsApp Inc. All Rights Reserved. */
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{dhdiigfejc:function(c,e,p){c.exports=p.p+"pdf.worker.b3c415adffc3ab488c3963fce37aeea8.js"}}]);
