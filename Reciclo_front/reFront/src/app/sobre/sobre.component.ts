@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-sobre',
@@ -11,6 +12,7 @@ export class SobreComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0, 0)
+    Aos.init();
   }
 
 }

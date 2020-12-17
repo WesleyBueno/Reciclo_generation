@@ -6,6 +6,10 @@
     font-family: "Baloo da 2",serif;
 }
 
+h2{
+    color: rgb(58, 54, 54);
+}
+
 .parallax{
     background-image: url('https://i.imgur.com/BecMrwm.jpg');
 
@@ -56,7 +60,7 @@ img {
     cursor: pointer;
     border-radius: 17px;
     transition: 0.3s;
-    padding-top: 10px;
+    padding-top: 12px;
     margin: 10px;
 }
 

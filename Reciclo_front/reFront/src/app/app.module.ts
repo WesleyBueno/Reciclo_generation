@@ -31,6 +31,7 @@ import { SobreComponent } from './sobre/sobre.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
