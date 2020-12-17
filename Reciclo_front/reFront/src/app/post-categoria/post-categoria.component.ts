@@ -46,7 +46,7 @@ export class PostCategoriaComponent implements OnInit {
     } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: CategoriaTable) =>{
         this.categoria = resp
-        this.router.navigate(['/feed'])
+        console.log(this.categoria.categoriaDescricao)
         alert('Tema cadastrado com sucesso!')
       })
     }

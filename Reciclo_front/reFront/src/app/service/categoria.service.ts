@@ -23,7 +23,7 @@ export class CategoriaService {
   }
 
   postCategoria(categoria: CategoriaTable):Observable<CategoriaTable>{
-    return this.http.post<CategoriaTable>('http://localhost:8080/categoria',categoria,this.token)
+    return this.http.post<CategoriaTable>('http://localhost:8080/categoria',this.token)
   }
   putCategoria(id : number):Observable<CategoriaTable>{
     return this.http.put<CategoriaTable>(`http://localhost:8080/categoria/${id}` , this.token)

@@ -5,7 +5,7 @@
 
             <div class="form-group">
                 <label class="text-monospace" for="texto">Nome da categoria:</label>
-                <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu novo tema" [(ngModel)]='categoria.categoriaNome'>
+                <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu novo tema" [(ngModel)]='categoria.categoriaDescricao' name ="categoriaDescricao" [ngModelOptions]="{standalone: true}"> 
             </div>
             <div class="row mb-5">
                 <div class="col-md-12 d-flex justify-content-center">

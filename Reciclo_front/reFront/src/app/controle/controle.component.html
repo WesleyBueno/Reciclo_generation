@@ -44,7 +44,7 @@
             <div class="col-md-6">
                 <div class="form-group m-0">
                     <label class="text-monospace" for="tema">Escolha uma categoria ou<a
-                            routerLink="/cadastrar-categoria">Cadastre uma nova</a></label>
+                            routerLink="/post-categoria">Cadastre uma nova</a></label>
                     <select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'categoria' (change) = 'findByIdCategoria()'>
                         <option *ngFor = 'let item of listaCategorias' value = {{item.idCategoria}} >
                             {{item.categoriaDescricao}}

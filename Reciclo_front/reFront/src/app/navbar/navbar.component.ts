@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
 import { SidebarComponent } from "../sidebar/sidebar.component";
 import { CategoriaService } from '../service/categoria.service';
+import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -14,6 +15,9 @@ import { CategoriaService } from '../service/categoria.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  faShoppingCart = faShoppingCart
+  faUser = faUser
 
   key = 'data'
   reverse = true
