@@ -17,6 +17,7 @@ import { VestuarioComponent } from './vestuario/vestuario.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ControleComponent } from './controle/controle.component';
+import { PaginaAdmComponent } from './pagina-adm/pagina-adm.component';
 
 
 const routes: Routes = [
@@ -36,7 +37,8 @@ const routes: Routes = [
   { path: 'vestuario' , component: VestuarioComponent},
   { path:'sidebar', component: SidebarComponent},
   { path: 'sobre' , component: SobreComponent},
-  { path: 'controle', component: ControleComponent}
+  { path: 'controle', component: ControleComponent},
+  { path: 'pagina-adm', component: PaginaAdmComponent }
 
 ];
 

@@ -12,8 +12,6 @@ import { CategoriaTable } from '../model/CategoriaTable';
 })
 export class PostCategoriaComponent implements OnInit {
 
-
-
   categoria: CategoriaTable = new CategoriaTable()
   listaCategorias!: CategoriaTable[]
   
@@ -41,13 +39,13 @@ export class PostCategoriaComponent implements OnInit {
   }
 
   cadastrar(){
-    if(this.categoria.categoriaDescricao == null){
+    if(this.categoria.categoriaNome == null){
       alert('Preencha o campo')
     } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: CategoriaTable) =>{
-        this.categoria = resp
-        this.router.navigate(['/feed'])
+        this.categoria = resp        
         alert('Tema cadastrado com sucesso!')
+        this.findAllCategorias()
       })
     }
   }

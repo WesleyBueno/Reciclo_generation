@@ -2,17 +2,22 @@
 
         <div class="col-md-8">
             <h3 class="text-center mb-4 text-monospace">Nova categoria</h3>
-
-            <div class="form-group">
-                <label class="text-monospace" for="texto">Nome da categoria:</label>
-                <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu novo tema" [(ngModel)]='categoria.categoriaNome'>
-            </div>
-            <div class="row mb-5">
-                <div class="col-md-12 d-flex justify-content-center">
-                    <button class="btn btn-outline-success w-25" (click)='cadastrar()'>Cadastrar</button>
+            <form #form="ngForm" name="form1" (ngSubmit)="cadastrar()">
+                <div class="form-group">
+                    <label class="text-monospace" for="texto">Nome da categoria:</label>
+                    <input class="form-control" type="text" id="categoriaNome" rows="1" placeholder="Digite aqui o seu novo tema" [(ngModel)]='categoria.categoriaNome' name="categoriaNome" >                             
+                 </div>
+                <div class="form-group">
+                    <label class="text-monospace" for="texto">Descrição:</label>
+                    <input class="form-control" type="text" id="categoriaDescricao" rows="3" placeholder="Digite aqui o seu novo tema"
+                        [(ngModel)]='categoria.categoriaDescricao' name="categoriaDescricao">
                 </div>
-            </div>
-
+                <div class="row mb-5">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <button class="btn btn-outline-success w-25" >Cadastrar</button>
+                    </div>
+                </div>
+            </form>
             <hr>
 
             <div class="row mt-5">
@@ -33,6 +38,7 @@
                 <tbody>
                     <tr *ngFor = 'let item of listaCategorias'>
                         <th scope="row">{{item.idCategoria}}</th>
+                        <td>{{item.categoriaNome}}</td>
                         <td>{{item.categoriaDescricao}}</td>
                         <td class="d-flex justify-content-end">
                             <a class="btn btn-outline-info mr-3">Editar</a>

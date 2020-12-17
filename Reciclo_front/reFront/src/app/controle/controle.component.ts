@@ -44,6 +44,8 @@ export class ControleComponent implements OnInit {
   }
 
   publicar(){
+    console.log(this.categoria.idCategoria)
+    console.log(this.produto.categoria)
     this.categoria.idCategoria = this.idCategoria
     this.produto.categoria = this.categoria
 
@@ -68,7 +70,7 @@ export class ControleComponent implements OnInit {
   }
 
   findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.categoria.idCategoria).subscribe((resp: CategoriaTable) =>{
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: CategoriaTable) =>{
       this.categoria = resp;
     })
 

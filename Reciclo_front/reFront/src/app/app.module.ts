@@ -27,6 +27,7 @@ import { VestuarioComponent } from './vestuario/vestuario.component';
 import { DecoracaoComponent } from './decoracao/decoracao.component';
 import { CommonModule } from '@angular/common';
 import { SobreComponent } from './sobre/sobre.component';
+import { PaginaAdmComponent } from './pagina-adm/pagina-adm.component';
 
 
 
@@ -50,7 +51,8 @@ import { SobreComponent } from './sobre/sobre.component';
     UtilitariosComponent,
     VestuarioComponent,
     DecoracaoComponent,
-    SobreComponent
+    SobreComponent,
+    PaginaAdmComponent
   ],
   imports: [
     BrowserModule,

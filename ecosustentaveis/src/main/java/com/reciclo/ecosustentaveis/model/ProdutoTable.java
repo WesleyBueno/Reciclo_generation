@@ -40,19 +40,23 @@ public class ProdutoTable{
 	private int produtoEstoque;
 	
 	@Column
-	private double produtoPeso;
+	private double produtoPeso;	
+	
+	@Column
+	private String produtoFornecedor;
+		
+	@Column
+	private String produtoStatus;
+	
+	@Column
+	private String produtoTamanho;
 	
 	@ManyToOne	
 	private CategoriaTable categoria;
-	
-	private String produtoFornecedor;
-		
 
 	@OneToMany(mappedBy = "produto",cascade = CascadeType.ALL)
 	@JsonIgnoreProperties(value = "produto")
-	private List<AvaliacaoTable> avaliacao;
-	
-	
+	private List<AvaliacaoTable> avaliacao;		
 	
 	@OneToMany(mappedBy = "produto",cascade = CascadeType.ALL)
 	@JsonIgnore
@@ -159,6 +163,26 @@ public class ProdutoTable{
 
 	public void setDetalhePedido(List<DetalhePedido> detalhePedido) {
 		this.detalhePedido = detalhePedido;
+	}
+
+
+	public String getProdutoStatus() {
+		return produtoStatus;
+	}
+
+
+	public void setProdutoStatus(String produtoStatus) {
+		this.produtoStatus = produtoStatus;
+	}
+
+
+	public String getProdutoTamanho() {
+		return produtoTamanho;
+	}
+
+
+	public void setProdutoTamanho(String produtoTamanho) {
+		this.produtoTamanho = produtoTamanho;
 	}
 	
 	

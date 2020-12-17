@@ -10,10 +10,7 @@ export class ProdutoTable{
     public produtoPeso!: number
     public categoria! : CategoriaTable
     public produtoFornecedor!: string
-
-
-
-
-
+    public produtoTamanho!: string
+    public produtoStatus!: string
 }
 

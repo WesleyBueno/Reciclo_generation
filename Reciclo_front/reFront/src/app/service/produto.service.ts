@@ -16,7 +16,7 @@ export class ProdutoService {
   }
 
   getAllProdutos():Observable<ProdutoTable[]>{
-    return this.http.get<ProdutoTable[]>('http://localhost:8080/produto/all',this.token)
+    return this.http.get<ProdutoTable[]>('http://localhost:8080/produto/all')
   }
 
   getByIdProdutos(id : number):Observable<ProdutoTable>{
