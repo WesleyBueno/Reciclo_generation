@@ -13,6 +13,20 @@
                 <label class="text-monospace" for="texto">Descrição:</label>
                 <textarea class="form-control" id="produtoDescricao" rows="3" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.produtoDescricao' name='produtoDescricao'></textarea>
             </div>
+            <div class="row d-flex align-itens-end">
+                <div class="col-md-6">
+                    <div class="form-group m-0">
+                        <label class="text-monospace" for="tema">Escolha uma categoria ou<a
+                                routerLink="/post-categoria">Cadastre uma nova</a></label>
+                        <select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'categoria' (change) = 'findByIdCategoria()'>
+                            <option *ngFor = 'let item of listaCategorias' value = {{item.idCategoria}} >
+                                {{item.categoriaDescricao}}
+                                
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
             <div class="form-group">
                 <label class="text-monospace" for="texto">Fornecedor:</label>
