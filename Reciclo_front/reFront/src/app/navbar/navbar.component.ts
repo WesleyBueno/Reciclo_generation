@@ -63,6 +63,7 @@ export class NavbarComponent implements OnInit {
         this.listaProdutos = resp
       })
     }
+    this.router.navigate(['/shop'])
   }
 
 }

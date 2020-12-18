@@ -32,8 +32,19 @@
     transition: 0.3s;
 }
 
-
 .fa-shopping-cart:hover{
+    color: rgb(48, 45, 45);
+}
+
+.fa-cog{
+    color: aliceblue;
+    font-size: 1.65em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.fa-cog:hover{
     color: rgb(48, 45, 45);
 }
 

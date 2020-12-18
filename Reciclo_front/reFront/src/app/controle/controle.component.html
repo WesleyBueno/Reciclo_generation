@@ -1,83 +1,65 @@
 <div class="container">
+    <div class="row mt-5 mb-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <form #form1="ngForm" name="form1" (ngSubmit)="publicar()">
+                <h3 class="text-center mb-4 text-monospace">Cadastrar novos produtos.</h3>
+                <div class="form-group">
+                    <label class="text-monospace" for="titulo">Nome do produto</label>
+                    <input type="text" class="form-control" id="produtoNome" placeholder="Digite aqui o nome do produto"[(ngModel)]='produto.produtoNome' name='produtoNome'>
+                </div>
 
- 
-    <div class="col-md-8">
-        <form #form1="ngForm" name="form1" (ngSubmit)="publicar()">
-            <h3 class="text-center mb-4 text-monospace">Cadastrar novos produtos.</h3>
-            <div class="form-group">
-                <label class="text-monospace" for="titulo">Nome do produto</label>
-                <input type="text" class="form-control" id="produtoNome" placeholder="Digite aqui o nome do produto"[(ngModel)]='produto.produtoNome' name='produtoNome'>
-            </div>
+                <div class="form-group">
+                    <label class="text-monospace" for="texto">Descrição:</label>
+                    <textarea class="form-control" id="produtoDescricao" rows="3" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.produtoDescricao' name='produtoDescricao'></textarea>
+                </div>
 
-            <div class="form-group">
-                <label class="text-monospace" for="texto">Descrição:</label>
-                <textarea class="form-control" id="produtoDescricao" rows="3" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.produtoDescricao' name='produtoDescricao'></textarea>
-            </div>
-            <div class="row d-flex align-itens-end">
-                <div class="col-md-6">
-                    <div class="form-group m-0">
-                        <label class="text-monospace" for="tema">Escolha uma categoria ou<a
-                                routerLink="/post-categoria">Cadastre uma nova</a></label>
-                        <select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'categoria' (change) = 'findByIdCategoria()'>
-                            <option *ngFor = 'let item of listaCategorias' value = {{item.idCategoria}} >
-                                {{item.categoriaDescricao}}
-                                
-                            </option>
-                        </select>
+                <div class="form-group">
+                    <label class="text-monospace" for="texto">Fornecedor:</label>
+                    <input class="form-control" type="text" id="produtoFornecedor" rows="1" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.produtoFornecedor' name="produtoFornecedor">
+                </div>
+
+                <div class="form-group">
+                    <label class="text-monospace" for="texto">Foto do produto:</label>
+                    <input class="form-control" type="text" id="produtoFoto" rows="1" placeholder="Insira o link da imagem do produto aqui" [(ngModel)]='produto.produtoFoto' name="produtoFoto">
+                </div>
+
+                <div class="form-group">
+                    <label class="text-monospace" for="texto">Estoque:</label>
+                    <input class="form-control" type="number" id="produtoEstoque" rows="1" placeholder="Digite aqui a quantidade" [(ngModel)]='produto.produtoEstoque' name="produtoEstoque">
+                </div>
+
+                <div class="form-group">
+                    <label class="text-monospace" for="texto">Peso:</label>
+                    <input class="form-control" min="1" step="any" type="number" id="produtoPeso" rows="1" placeholder="Digite aqui o peso" [(ngModel)]='produto.produtoPeso' name="produtoPeso">
+                </div>
+
+                <div class="form-group">
+                    <label class="text-monospace" for="texto">Preço:</label>
+                    <input class="form-control" min="1" step="any" type="number" id="preco" rows="1" placeholder="Digite aqui o preço" [(ngModel)]='produto.preco' name="preco">
+                </div>
+
+
+                <div class="row d-flex align-itens-end">
+                    <div class="col-md-10">
+                        <div class="form-group m-0">
+                            <label class="text-monospace" for="tema">Escolha uma categoria ou <a
+                                    routerLink="/post-categoria">Cadastre uma nova</a></label>
+                            <select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'idCategoria' (change) = 'findByIdCategoria()'>
+
+                                <option *ngFor = 'let item of listaCategorias' value = {{item.idCategoria}} >
+                                    {{item.categoriaNome}}                                
+                                </option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row col-2 d-flex jsutify-content-end">
+                        <button type="submit" class="btn btn-outline-info" >{{ idProd? 'Editar' : 'Cadastrar' }}</button>
                     </div>
                 </div>
-            </div>
-
-            <div class="form-group">
-                <label class="text-monospace" for="texto">Fornecedor:</label>
-                <input class="form-control" type="text" id="produtoFornecedor" rows="1" placeholder="Digite aqui a descrição do produto" [(ngModel)]='produto.produtoFornecedor' name="produtoFornecedor">
-            </div>
-
-            <div class="form-group">
-                <label class="text-monospace" for="texto">Foto do produto:</label>
-                <input class="form-control" type="text" id="produtoFoto" rows="1" placeholder="Insira o link da imagem do produto aqui" [(ngModel)]='produto.produtoFoto' name="produtoFoto">
-            </div>
-
-            <div class="form-group">
-                <label class="text-monospace" for="texto">Estoque:</label>
-                <input class="form-control" type="number" id="produtoEstoque" rows="1" placeholder="Digite aqui a quantidade" [(ngModel)]='produto.produtoEstoque' name="produtoEstoque">
-            </div>
-
-            <div class="form-group">
-                <label class="text-monospace" for="texto">Peso:</label>
-                <input class="form-control" min="1" step="any" type="number" id="produtoPeso" rows="1" placeholder="Digite aqui o peso" [(ngModel)]='produto.produtoPeso' name="produtoPeso">
-            </div>
-
-            <div class="form-group">
-                <label class="text-monospace" for="texto">Preço:</label>
-                <input class="form-control" min="1" step="any" type="number" id="preco" rows="1" placeholder="Digite aqui o preço" [(ngModel)]='produto.preco' name="preco">
-            </div>
-
-
-            <div class="row d-flex align-itens-end">
-                <div class="col-md-6">
-                    <div class="form-group m-0">
-                        <label class="text-monospace" for="tema">Escolha uma categoria ou <a
-                                routerLink="/post-categoria">Cadastre uma nova</a></label>
-                        <select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'idCategoria' (change) = 'findByIdCategoria()'>
-
-                            <option *ngFor = 'let item of listaCategorias' value = {{item.idCategoria}} >
-                                {{item.categoriaNome}}                                
-                            </option>
-
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex jsutify-content-end">
-                    <button type="submit" class="btn btn-outline-info w-25" >Publicar</button>
-                </div>
-            </div>
-        </form>
-        
-        <hr class="mt-5 mb-5">
-
-        
-
+            </form>        
+            <hr class="mt-5 mb-5">        
+        </div>
     </div>
 </div>
 

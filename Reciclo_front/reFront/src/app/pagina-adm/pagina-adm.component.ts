@@ -9,7 +9,7 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class PaginaAdmComponent implements OnInit {
 
-  listaProdutos:ProdutoTable[]=[]
+  listaProdutos!:ProdutoTable[]
 
   constructor(public produtoService:ProdutoService) { }
 
@@ -19,6 +19,14 @@ export class PaginaAdmComponent implements OnInit {
     this.findAllProdutos()    
   }
 
+  delete(id:number)
+  {
+    this.produtoService.deleteProduto(id).subscribe(response =>
+      {
+        alert("deletado com sucesso!")  
+    }, errorResponse => {alert("Erro!")})
+  }
+ 
   findAllProdutos() {
     this.produtoService.getAllProdutos().subscribe((resp: ProdutoTable[]) => {
       this.listaProdutos = resp

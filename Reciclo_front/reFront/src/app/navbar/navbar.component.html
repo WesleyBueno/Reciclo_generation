@@ -27,45 +27,34 @@
 
         <div class="navegacao">
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 " type="search" placeholder="Pesquisar" aria-label="Pesquisar" [(ngModel)]='produtoNome'>
+                <input class="form-control mr-sm-2 " type="search" placeholder="Pesquisar produto" aria-label="Pesquisar" [(ngModel)]='produtoNome' name="produtoNome">
                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit" (click)='findByNomeProduto()'>Pesquisar</button>
             </form>
         </div>
 
-
-        <div *ngIf='auth.btnCadProd()'>
-        
-            <a class="btn btn-outline-light mr-2" routerLink='/pagina-adm'>Control</a>
-        
+        <div class="gear" *ngIf='auth.btnCadProd()'>
+            <i class="fas fa-cog" routerLink='/pagina-adm'></i>    
         </div>
-        
+    
+
+        <div class="nav-item dropdown profile">
+
+            <i class="nav-link dropdown-toggle fas fa-user-circle" routerLink='#' id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"></i>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a *ngIf='auth.btnSair()' class="dropdown-item" routerLink='/pagina-usuario'>Perfil</a>
+                <a *ngIf='auth.btnLogin()' class="dropdown-item" routerLink='/login'>Login</a>
+                <a *ngIf='auth.btnLogin()' class="dropdown-item" routerLink='/cadastro'>Cadastrar</a>
+                <a *ngIf='auth.btnSair()' class="dropdown-item" routerLink=''>Pedidos</a>
+                <a *ngIf='auth.btnSair()' class="dropdown-item" routerLink='' (click)='sair()'>Sair</a>
+            </div>
+
+        </div>               
+
         <div class="cart">
-        <i class="fas fa-shopping-cart" routerLink='/carrinho'></i>
+            <i class="fas fa-shopping-cart" routerLink='/carrinho'></i>
         </div>
-
-        <div class="profile">
-            <i class="fas fa-user-circle" routerLink='/pagina-usuario'></i>
-        </div>
-
-        
-        <div *ngIf='auth.btnLogin()'>
-
-            <a class="btn btn-outline-light mr-2" routerLink='/login'>login</a>
-
-        </div>
-
-        <div *ngIf='auth.btnLogin()'>
-
-            <a class="btn btn-outline-light mr-2" routerLink='/cadastro'>Cadastro</a>
-
-        </div>
-
-        <div *ngIf='auth.btnSair()'>
-
-            <a class="btn btn-outline-light mr-2" (click)='sair()'>Sair</a>
-
-        </div>
-
 
     </div>
 </nav>
