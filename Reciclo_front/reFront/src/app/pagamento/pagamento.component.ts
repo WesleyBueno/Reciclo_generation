@@ -12,8 +12,8 @@ export class PagamentoComponent implements OnInit {
   @ViewChild('paypal',{static: true}) paypalElement!: ElementRef;
 
   product = {
-    price: 19.97,
-    description: 'Headset gamer', 
+    price: 39.99,
+    description: 'Camiseta', 
 
   }
 
