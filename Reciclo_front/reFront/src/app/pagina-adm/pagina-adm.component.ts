@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoTable } from '../model/ProdutoTable';
 import { ProdutoService } from '../service/produto.service';
 
@@ -10,18 +11,31 @@ import { ProdutoService } from '../service/produto.service';
 export class PaginaAdmComponent implements OnInit {
 
   listaProdutos!:ProdutoTable[]
+  idProd!:number
 
-  constructor(public produtoService:ProdutoService) { }
+  constructor(public produtoService:ProdutoService,
+    private activatedRoute: ActivatedRoute,
+    private router:Router) { }
 
   ngOnInit() 
   {
     window.scroll(0, 0)
-    this.findAllProdutos()    
+    let params = this.activatedRoute.snapshot
+    this.idProd = params.params["id"]
+    if (params && params.params["id"]) 
+    {
+      this.delete ()
+      this.router.navigate(['/pagina-adm'])
+      this.findAllProdutos()
+    }
+
+    this.findAllProdutos()
   }
 
-  delete(id:number)
+  delete()
   {
-    this.produtoService.deleteProduto(id).subscribe(response =>
+
+    this.produtoService.deleteProduto(this.idProd).subscribe(response =>
       {
         alert("deletado com sucesso!")  
     }, errorResponse => {alert("Erro!")})

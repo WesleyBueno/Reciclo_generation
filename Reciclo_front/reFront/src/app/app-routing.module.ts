@@ -39,7 +39,8 @@ const routes: Routes = [
   { path: 'sobre' , component: SobreComponent},
   { path: 'controle', component: ControleComponent},
   { path: 'controle/:id', component: ControleComponent},
-  { path: 'pagina-adm', component: PaginaAdmComponent }
+  { path: 'pagina-adm', component: PaginaAdmComponent },
+  { path: 'pagina-adm/:id', component: PaginaAdmComponent }
 
 ];
 

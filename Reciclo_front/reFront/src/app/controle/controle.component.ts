@@ -37,7 +37,6 @@ export class ControleComponent implements OnInit {
     window.scroll(0 , 0)    
 
     let params = this.activatedRoute.snapshot    
-    console.log(this.activatedRoute.params)   
     if (params && params.params["id"])
     {
       this.idProd = params.params["id"]
